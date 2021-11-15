@@ -1,49 +1,14 @@
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main implements Runnable {
+/*
+    public static Double countStepTrap(Double[] u) {
+        double startStep = 1.;
+        double err1 = 1.;*/
 
     //start coefficients
-    public static final Double g = 9.81;
-    public static final Double m1 = 2.5;
-    public static final Double m2 = 3.;
-    public static final Double l1 = 1.5;
-    public static final Double l2 = 2.;
-    public static final Double epsilon = 0.000001;
+    " dhhdt/* saf
+            */"
 
-    public static Double[] ftu(double step, Double[] u) {
-        Double[] result = new Double[4];
-        result[0] = u[2];
-        result[1] = u[3];
-        result[2] = (-g * (2 * m1 + m2) * Math.sin(u[0]) - m2 * g * (Math.sin(u[0] - 2 * u[1])) - 2 * m2 * (l1 * Math.pow(u[2], 2) * Math.cos((u[0] - u[1]) + l2 * u[3] * u[3])) * Math.sin(u[0] - u[1])) / (l1 * (2 * m1 + m2 - m2 * Math.cos(2 * (u[0] - u[1]))));
-        result[3] = (2 * Math.sin(u[0] - u[1]) * (l1 * (m1 + m2) * Math.pow(u[2], 2) + g * (m1 + m2) * Math.cos(u[0]) + l2 * m2 * Math.pow(u[3], 2) * Math.cos(u[0] - u[1]))) / (l2 * (2 * m1 + m2 - m2 * Math.cos(2 * (u[0] - u[1]))));
-        return result;
-    }
-
-    public static Double[] methodEuler(Double[] u, double step) {
-        Double[] result = new Double[4];
-        Double[] vectorF = ftu(step, u);
-        for (int i = 0; i < 4; i++) {
-            result[i] = u[i] + step * vectorF[i];
-        }
-        return result;
-    }
-
-    public static Double[] methodTrap(Double[] u, double step) {
-        Double[] result = new Double[4];
-        Double[] tempU = new Double[4];
-        Double[] vectorF = ftu(step, u);
-        for (int i = 0; i < 4; i++) {
-            tempU[i] = u[i] + step * vectorF[i];
-        }
-        Double[] vectorF2 = ftu(step, tempU);
-        for (int i = 0; i < 4; i++) {
-            result[i] = tempU[i] + (step / 2) * (vectorF2[i] + vectorF[i]);
-        }
-        return result;
-    }
 
     public static Double countStepEuler(Double[] u0) {// method Euler p=1
         double startStep = 1.;
@@ -61,9 +26,6 @@ public class Main implements Runnable {
         return startStep;
     }
 
-    public static Double countStepTrap(Double[] u) {
-        double startStep = 1.;
-        double err1 = 1.;
         double err2 = 1.;
         while (!(Math.abs(err1) < epsilon && Math.abs(err2) < epsilon)) {
             Double[] y1 = methodTrap(u, startStep);
