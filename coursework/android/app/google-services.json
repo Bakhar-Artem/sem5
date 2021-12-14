@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "563180818229",
+    "project_id": "bookspot-4cacf",
+    "storage_bucket": "bookspot-4cacf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563180818229:android:18dd108df9b760698e467c",
+        "android_client_info": {
+          "package_name": "by.bsu.bakhar.coursework"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563180818229-qq419hh5615fn4vo6p0f47cv3heq9cu0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8LtdOW9cY8bzabymdyQNE2AYS3pqpc6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563180818229-qq419hh5615fn4vo6p0f47cv3heq9cu0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "563180818229-p30it7fb924vab4c52jvc1skduac7nct.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "by.bsu.bakhar.coursework"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
