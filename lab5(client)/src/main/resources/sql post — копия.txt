@@ -1,0 +1,6 @@
+
+create table status
+(
+status_id serial primary key,
+status_name varchar(10) not null
+);
